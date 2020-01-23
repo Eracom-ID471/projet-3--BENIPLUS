@@ -1,0 +1,16 @@
+---
+layout: article
+title: GROUPES
+---
+
+<section>
+{% for post in site.posts %}
+{% if post.category =="groupes" %}
+<div class="article">
+  <img src="{{ post.image | relative_url }}">
+  <h1>{{ post.title }}</h1>
+  <h2>{{ post.sous-title}}</h2>
+</div>
+{% endif %}
+{% endfor %}
+</section>

@@ -8,17 +8,8 @@
   </head>
   <body>
     <header>{% include header.html %}</header>
-    <section>{% include jumbotron.html %}</section>
     <section class="hello">
-      {% for post in site.posts %}
-      {% if post.important =="pas-important" %}
-      <div class="article">
-      <img src="{{ post.image | relative_url }}">
-      <h1>{{ post.title }}</h1>
-      <h2>{{ post.sous-title}}</h2>
-      </div>
-      {% endif %}
-      {% endfor %}
+      {{ content }}
     </section>
     <footer>{% include footer.html %}</footer>
 
